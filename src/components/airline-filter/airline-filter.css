@@ -1,0 +1,44 @@
+.airline-filter-container {
+  margin-top: 16px;
+  margin-bottom: 40px;
+}
+
+.airline-filter-description {
+  margin-left: 5px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.airline-filter-checkbox-buttons {
+  margin-top: 20px;
+}
+
+.airline-filter-checkbox-form input[type=checkbox] {
+	display: none;
+}
+.airline-filter-checkbox-form label {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	padding-left: 24px;
+	margin-right: 0;
+	line-height: 18px;
+	user-select: none;
+} 
+
+.airline-filter-checkbox-form label::before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+  position: absolute;
+  top: 0;
+	left: 0;
+  background: url(../transfer-filter/checkbox-unchecked.svg) no-repeat;
+}
+ 
+
+.airline-filter-checkbox-form input[type=checkbox]:checked + label::before {
+	background: url(../transfer-filter/checkbox-checked.svg) no-repeat;
+	white-space: nowrap;
+} 

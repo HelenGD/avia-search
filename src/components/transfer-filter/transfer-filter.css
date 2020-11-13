@@ -1,0 +1,43 @@
+.transfer-filter-description {
+  margin-left: 5px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.transfer-filter-container {
+  margin-top: 16px;
+}
+
+.transfer-filter-checkbox-buttons {
+  margin-top: 20px;
+}
+
+.transfer-filter-checkbox-form input[type=checkbox] {
+	display: none;
+}
+.transfer-filter-checkbox-form label {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	padding-left: 24px;
+	margin-right: 0;
+	line-height: 18px;
+	user-select: none;
+} 
+
+.transfer-filter-checkbox-form label::before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+  position: absolute;
+  top: 0;
+	left: 0;
+  background: url(./checkbox-unchecked.svg) no-repeat;
+}
+ 
+
+.transfer-filter-checkbox-form input[type=checkbox]:checked + label::before {
+	background: url(./checkbox-checked.svg) no-repeat;
+	white-space: nowrap;
+} 

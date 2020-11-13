@@ -1,0 +1,16 @@
+.main-container {
+  display: flex;
+}
+
+.main-filter-container {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  background-color: #DCDCDC;
+  padding-top: 26px;
+  padding-bottom: 80px;
+}
+
+.main-filter-wrapper {
+  background-color: white;
+}

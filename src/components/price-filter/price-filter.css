@@ -1,0 +1,27 @@
+.price-filter-container {
+  margin-top: 16px;
+}
+
+.price-filter-description {
+  margin-left: 5px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.price-filter-input-wrapper {
+  margin-top: 20px;
+}
+
+label {
+  margin-right: 5px;
+}
+
+.price-filter-input-form:first-child {
+  margin-bottom: 10px;
+}
+
+.price-filter-input {
+  border: none;
+  border: 1px solid gray;
+  border-radius: 2px;
+}

@@ -1,0 +1,42 @@
+.sort-description {
+  margin-left: 5px;
+	font-weight: bold;
+}
+
+.sort-radio-form {
+	margin-bottom: 2px;
+}
+
+.sort-radio-form input[type=radio] {
+	display: none;
+}
+.sort-radio-form label {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	padding-left: 24px;
+	margin-right: 0;
+	line-height: 18px;
+	user-select: none;
+} 
+
+.sort-radio-form label::before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 0;
+	left: 0;
+  background: url(./radio-button-unchecked.svg) no-repeat;
+}
+ 
+
+.sort-radio-form input[type=radio]:checked + label::before {
+	background: url(./radio-button-checked.svg) no-repeat;
+	white-space: nowrap;
+} 
+
+.sort-container {
+	margin-top: 20px;
+}
