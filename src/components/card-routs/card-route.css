@@ -1,0 +1,75 @@
+.card-container-with-routs + .card-container-with-routs {
+  border-top: 2px solid #00BFFF;
+}
+
+.card-direction-departure {
+  border-bottom: 1px solid #DCDCDC;
+  padding: 10px;
+  margin: 0 10px;
+}
+
+.card-airport-code {
+  color: #00BFFF;
+}
+
+.card-airport-code-departure {
+  margin-right: 6px;
+}
+
+.card-departure {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.card-time {
+  margin-right: 10px;
+}
+
+.card-date {
+  color: #00BFFF;
+}
+
+.card-flight-duration {
+  margin-left: 4px;
+}
+
+.card-date-arrival {
+  margin-right: 10px;
+}
+
+.card-transfers {
+  overflow: hidden;
+  font-size: 14px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: orange;
+  width: 90%;
+  margin: auto;
+}
+
+.card-transfers::before,
+.card-transfers::after {
+  content: '';
+  border-top: 2px solid #ccc;
+  flex-grow: 1;
+}
+
+.card-transfers::before {
+  margin-right: 10px;
+}
+
+.card-transfers::after {
+  margin-left: 10px;
+}
+
+.card-airline-name {
+  padding: 10px;
+}
+
+.card-airline-name-description {
+  margin-left: 10px;
+}
