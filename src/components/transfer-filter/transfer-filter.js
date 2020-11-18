@@ -29,18 +29,6 @@ function TransferFilter(props) {
             </label>
           </div>
         ))}
-
-        
-        {/* // <div className="transfer-filter-checkbox-form">
-        //   <input
-        //     type="checkbox"
-        //     id="one-transfer"
-        //     name="one-transfer" 
-        //     onChange={() => onChange({...stops, 1: !stops[1]})}
-        //     checked={stops[1]}
-        //   />
-        //   <label htmlFor="one-transfer">- 1 пересадка</label>
-        // </div> */}
       </div>
     </div>
   );

@@ -1,4 +1,3 @@
-
 import './price-filter.css';
 
 const displayRange = {
@@ -10,24 +9,6 @@ const placeholderRange = {
   min: 0,
   max: 10000,
 }
-
-// {Object.keys(stops).map(key => (
-//   <div 
-//     key={key}
-//     className="transfer-filter-checkbox-form"
-//   >
-//     <input
-//       type="checkbox"
-//       id={`transfer-${key}`}
-//       name="transfer"
-//       onChange={() => onChange({...stops, [key]: !stops[key]})}
-//       checked={stops[key]}
-//     />
-//     <label htmlFor={`transfer-${key}`}>
-//       {displayStops[key]}
-//     </label>
-//   </div>
-// ))}
 
 function PriceFilter(props) {
   const { onChange, range } = props;

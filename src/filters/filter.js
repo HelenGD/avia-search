@@ -3,13 +3,13 @@ const getMaxStops = (flight) => flight.routes.reduce(
   0,
 );
 
-export const getFilteredFlights = (flights, {stops, range}) => {
+export const getFilteredFlights = (flights, {stops, range, airlines}) => {
   return flights.filter(flight =>  {
     const maxStops = getMaxStops(flight);
 
     const amount = parseInt(flight.amount, 10);
-    const inRange = range.min <= amount && range.max >= amount
+    const inRange = range.min <= amount && range.max >= amount;
 
-    return stops[maxStops] && inRange;
+    return stops[maxStops] && inRange && airlines[flight.caption];
   });
 }

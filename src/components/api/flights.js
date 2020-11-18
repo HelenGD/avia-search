@@ -7,7 +7,6 @@ import {random} from '../../utils';
 export const fetchFlights = () => {
 
   const flights = mock.result.flights.map(flight => ({
-    _: console.log(flight),
     key: uuidv4(),
     caption: flight.flight.carrier.caption,
     amount: flight.flight.price.total.amount,

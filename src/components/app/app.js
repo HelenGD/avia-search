@@ -9,7 +9,6 @@ function App(props) {
   useEffect(
     () => {
       fetchFlights().then((newFlights) => {
-        console.log(newFlights);
         setFlights(newFlights);
       })
     },

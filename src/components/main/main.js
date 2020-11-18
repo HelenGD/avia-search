@@ -3,19 +3,18 @@ import { Sort } from '../sort/sort';
 import { TransferFilter } from '../transfer-filter/transfer-filter';
 import { PriceFilter } from '../price-filter/price-filter';
 import { AirlineFilter } from '../airline-filter/airline-filter';
-// import { Card } from '../card/card';
-// import { ShowMoreButton } from '../show-more-button/show-more-button';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { getSortedTickets, SortType } from '../../filters/sort';
-import { getFilteredFlights } from '../../filters/stops';
+import { getFilteredFlights } from '../../filters/filter';
 import { CardList } from '../card-list/card-list';
 
 const getAirlinesFilter = (flights) => {
-  const result = flights.reduce(function (map, obj) {
-    map[obj.caption] = true;
+  const result = flights.reduce((map, flight) => {
+    map[flight.caption] = true;
     return map;
   }, {});
-  console.log(result)
+  
+  return result;
 };
 
 function Main(props) {
@@ -27,11 +26,14 @@ function Main(props) {
     1: true,
   });
 
-  const [airlines, setAirlines] = useState({
-    'Polish Airlines от 21049р': true,
-  });
+  const [airlines, setAirlines] = useState(getAirlinesFilter(flights));
 
-  console.log('AirlinesFilter', getAirlinesFilter(flights))
+  useEffect(
+    () => {
+      setAirlines(getAirlinesFilter(flights));
+    },
+    [flights]
+  );
 
   const [range, setRange] = useState({
     min: 0,
@@ -39,8 +41,8 @@ function Main(props) {
   });
 
   const filteredFlights = useMemo(
-    () => getFilteredFlights(flights, { stops, range }),
-    [flights, stops, range],
+    () => getFilteredFlights(flights, { stops, range, airlines }),
+    [flights, stops, range, airlines],
   );
 
   const sortedFlights = useMemo(
@@ -64,19 +66,13 @@ function Main(props) {
             onChange={setRange}
             range={range}
           />
-          <AirlineFilter flights={filteredFlights} />
+          <AirlineFilter 
+            flights={airlines} 
+            onChange={setAirlines}
+          />
         </div>
       </div>
       <CardList flights={sortedFlights} />
-      {/* <div>
-        {sortedFlights.map(flight => (
-          <Card
-            key={flight.key}
-            flight={flight}
-          />
-        ))}
-        <ShowMoreButton />
-      </div> */}
     </div>
   );
 }

@@ -57,7 +57,7 @@ function CardRoute(props) {
       </div>
       <div className="card-airline-name">
         <span className="card-airline-name-description">
-          Рейс выполняет: {route.airline.uid} {route.airline.caption}
+          Рейс выполняет: {route.airline.caption}
         </span>
       </div>
     </div>

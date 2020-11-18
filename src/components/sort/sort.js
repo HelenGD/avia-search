@@ -45,27 +45,3 @@ function Sort(props) {
 }
 
 export { Sort };
-
-
-// {menuItems.map((menuItem) => (
-//   <li key={menuItem.type}
-//     className={`places__option ${menuItem.type === currentSortType ? `places__option--active` : ``}`}
-//     tabIndex="0"
-//     onClick={() => this._handleMenuClick(menuItem.type)}
-//   >
-//     {menuItem.text}
-//   </li>
-// ))}
-
- /* <div className="sort-radio-form">
-          <input id="increase-price" type="radio" name="radio" value="radio-1" defaultChecked/>
-          <label htmlFor="increase-price">- по возрастанию цены</label>
-        </div>
-        <div className="sort-radio-form">
-          <input id="decrease-price" type="radio" name="radio" value="radio-2" />
-          <label htmlFor="decrease-price">- по убыванию цены</label>
-        </div>
-        <div className="sort-radio-form">
-          <input id="travel-time" type="radio" name="radio" value="radio-3" />
-          <label htmlFor="travel-time">- по времени в пути</label>
-        </div> */
